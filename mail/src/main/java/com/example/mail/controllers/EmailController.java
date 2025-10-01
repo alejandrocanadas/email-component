@@ -1,0 +1,28 @@
+package com.example.mail.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.mail.services.IEmailServer;
+import com.example.mail.services.models.EmailDTO;
+
+import jakarta.mail.MessagingException;
+
+@RestController
+@RequestMapping()
+public class EmailController {
+    
+    @Autowired
+    IEmailServer emailService;
+    
+    @PostMapping("/send-email")
+    public ResponseEntity<String> sendEmail(@RequestBody EmailDTO email) throws MessagingException {
+        emailService.sendEmail(email);
+        return new ResponseEntity<>("Email sent successfully", HttpStatus.OK);
+    }
+}
