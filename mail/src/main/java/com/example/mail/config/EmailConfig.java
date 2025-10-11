@@ -16,7 +16,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 public class EmailConfig {
 
     @Value("${email.username}")
-    private String username;
+    private String username; 
 
     @Value("${email.password}")
     private String password;
