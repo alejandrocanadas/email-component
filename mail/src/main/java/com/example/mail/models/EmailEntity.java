@@ -1,4 +1,4 @@
-package com.example.mail.services.models;
+package com.example.mail.models;
 
 import java.time.LocalDateTime;
 

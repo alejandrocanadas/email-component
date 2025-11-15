@@ -1,4 +1,4 @@
-package com.example.mail.services.implementation;
+package com.example.mail.services;
 
 import java.time.LocalDateTime;
 
@@ -7,12 +7,10 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 
+import com.example.mail.models.EmailDTO;
+import com.example.mail.models.EmailEntity;
 import com.example.mail.repository.EmailRepository;
-import com.example.mail.services.IEmailServer;
-import com.example.mail.services.models.EmailDTO;
-import com.example.mail.services.models.EmailEntity;
 
-// import io.micrometer.observation.Observation.Context;
 import org.thymeleaf.context.Context;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

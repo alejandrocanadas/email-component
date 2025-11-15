@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.mail.models.EmailDTO;
 import com.example.mail.services.IEmailServer;
-import com.example.mail.services.models.EmailDTO;
 
 import jakarta.mail.MessagingException;
 

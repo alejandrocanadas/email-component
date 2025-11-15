@@ -1,6 +1,6 @@
 package com.example.mail.services;
 
-import com.example.mail.services.models.EmailDTO;
+import com.example.mail.models.EmailDTO;
 
 import jakarta.mail.MessagingException;
 

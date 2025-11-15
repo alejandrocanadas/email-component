@@ -1,4 +1,5 @@
-package com.example.mail.services.models;
+package com.example.mail.models;
+
 
 public class EmailDTO {
     
@@ -6,6 +7,13 @@ public class EmailDTO {
     private String asunto;
     private String mensaje;
     private String from;
+
+    public EmailDTO(String destinatario, String asunto, String mensaje, String from) {
+        this.destinatario = destinatario;
+        this.asunto = asunto;
+        this.mensaje = mensaje;
+        this.from = from;
+    }
 
     public String getDestinatario() {
         return destinatario;

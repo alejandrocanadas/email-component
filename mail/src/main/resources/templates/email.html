@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Correo de Prueba con HTML</title>
-    </head>
-    <body>
-        <h1 style="color: #007bff">¡Hola!</h1>
-        <p style="color: #f00;" th:text="${mensaje}"></p>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Notificación de Pago</title>
+
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #235ED8, #2E89FF);
+            padding: 30px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .status-box {
+            background: #f0f4ff;
+            border-left: 4px solid #2E89FF;
+            padding: 12px 16px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .footer {
+            background: #f4f6f8;
+            text-align: center;
+            padding: 18px;
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #235ED8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Estado de tu transacción</h1>
+        </div>
+
+        <div class="content">
+
+            <p>Hola <span class="highlight" th:text="${nombre}"></span>,</p>
+
+            <p>Queremos informarte el resultado de tu reciente operación realizada en nuestro sistema.</p>
+
+            <div class="status-box">
+                <p th:utext="${mensaje}"></p>
+            </div>
+
+            <p>
+                Si tienes alguna duda o no reconoces esta operación, por favor comunícate con nuestro equipo de soporte.
+            </p>
+
+            <p>Gracias por confiar en nuestros servicios.</p>
+        </div>
+
+        <div class="footer">
+            © 2025 Sistema de Pagos — Notificación Automática.
+        </div>
+    </div>
+
+</body>
 </html>
